@@ -24,12 +24,11 @@ app.use('/stream', eventHandler(async (event) => {
     ];
 
     try {
-        console.log('before eventStream.send()')
-        for (const message of messages) {
-            await eventStream.push(message)
-        }
+        console.log('before eventStream.push()')
+        await eventStream.push(messages[0])
+        console.log('👉 WE NEVER GET HERE')
+        console.log('after eventStream.push()')
         await eventStream.send()
-
         console.log('after eventStream.send()')
 
     } catch (error) {
