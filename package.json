@@ -1,8 +1,9 @@
 {
-  "name": "bug",
+  "name": "h3-eventstream-multi-push-hang",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Minimal reproduction for bug report",
+  "main": "server.mjs",
+  "type": "module",
   "scripts": {
     "start": "node server.mjs"
   },
